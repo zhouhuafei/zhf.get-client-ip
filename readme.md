@@ -29,13 +29,13 @@ ip(req, 'nginx'); // xxx.xxx.xxx.xxx
 ```
 # 注意1
 * 如果你使用了nginx代理，但是你没有配置nginx的x-real-ip和x-forwarded-for
-* 会存在ip被伪造的漏洞
+* 会存在ip被伪造的漏洞 - 如果我伪造x-real-ip和x-forwarded-for
 # 注意2
 * 如果你使用了nginx代理，但是你函数调用的时候没有传入第二参数'nginx'
 * 会导致获取到的ip一直是127.0.0.1
 # 注意3
 * 如果你没使用nginx代理，但是你函数调用的时候传入了第二参数'nginx'
-* 会存在ip被伪造的漏洞
+* 会存在ip被伪造的漏洞 - 如果我伪造x-real-ip和x-forwarded-for
 # 其他
 * 如果你没使用nginx做代理，你直接req.connection.remoteAddress就可以获取到公网ip，也没必要使用我这个东西
 * 我的这个东西是为了解决服务端使用了nginx做端口转发，导致req.connection.remoteAddress获取到的ip一直是127.0.0.1而存在的
