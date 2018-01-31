@@ -1,15 +1,14 @@
-const randomNum = require('../dist/index.min');
+const getClientIp = require('../dist/index.min');
 
-test(`randomNum(1,2); // 1 - 2`, () => {
-    const num = randomNum(1, 2);
-    console.log(num);
-    const isTrue = num >= 1 && num <= 2;
-    expect(true).toEqual(isTrue);
-});
-
-test(`randomNum(2); // 0 - 2`, () => {
-    const num = randomNum(2);
-    console.log(num);
-    const isTrue = num >= 0 && num <= 2;
-    expect(true).toEqual(isTrue);
+test(`假设使用了nginx`, () => {
+    const setIp = '192.168.51.93';
+    const getIp = getClientIp({
+        headers: {
+            'x-real-ip': setIp,
+            'x-forwarded-for': setIp,
+        },
+        connection: {},
+        socket: {},
+    }, 'nginx');
+    expect(getIp).toEqual(setIp);
 });
