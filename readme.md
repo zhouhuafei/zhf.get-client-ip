@@ -39,6 +39,3 @@ ip(req, 'nginx'); // xxx.xxx.xxx.xxx
 # 其他
 * 如果你没使用nginx做代理，你直接req.connection.remoteAddress就可以获取到公网ip，也没必要使用我这个东西
 * 我的这个东西是为了解决服务端使用了nginx做端口转发，导致req.connection.remoteAddress获取到的ip一直是127.0.0.1而存在的
-
-
-
