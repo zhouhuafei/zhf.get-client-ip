@@ -1,4 +1,4 @@
-# nodejs 获取请求来源的ip
+# nodejs 服务端获取客户端(请求来源)的ip
 * 安装
 ```
 npm i --save zhf.ip
