@@ -5,8 +5,8 @@ npm i --save zhf.get-client-ip
 ```
 * 使用
 ```
-const ip = require('zhf.get-client-ip');
-ip(req); // xxx.xxx.xxx.xxx
+const getClientIp = require('zhf.get-client-ip');
+getClientIp(req); // xxx.xxx.xxx.xxx
 ```
 # 如果你在服务器端使用了nginx进行端口转发
 * 首先请配置你的nginx(必须配置)
@@ -24,8 +24,8 @@ server {
 ```
 * 使用(第二参数'nginx'必须传入)
 ```
-const ip = require('zhf.get-client-ip');
-ip(req, 'nginx'); // xxx.xxx.xxx.xxx
+const getClientIp = require('zhf.get-client-ip');
+getClientIp(req, 'nginx'); // xxx.xxx.xxx.xxx
 ```
 # 注意1
 * 如果你使用了nginx代理，但是你没有配置nginx的x-real-ip和x-forwarded-for
