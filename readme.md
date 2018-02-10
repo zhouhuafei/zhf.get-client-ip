@@ -1,11 +1,11 @@
 # nodejs 服务端获取客户端(请求来源)的ip
 * 安装
 ```
-npm i --save zhf.ip
+npm i --save zhf.get-client-ip
 ```
 * 使用
 ```
-const ip = require('zhf.ip');
+const ip = require('zhf.get-client-ip');
 ip(req); // xxx.xxx.xxx.xxx
 ```
 # 如果你在服务器端使用了nginx进行端口转发
@@ -24,7 +24,7 @@ server {
 ```
 * 使用(第二参数'nginx'必须传入)
 ```
-const ip = require('zhf.ip');
+const ip = require('zhf.get-client-ip');
 ip(req, 'nginx'); // xxx.xxx.xxx.xxx
 ```
 # 注意1

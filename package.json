@@ -1,6 +1,6 @@
 {
-    "name": "zhf.ip",
-    "version": "1.0.1",
+    "name": "zhf.get-client-ip",
+    "version": "1.0.0",
     "description": "no description",
     "main": "dist/index.min.js",
     "scripts": {
@@ -11,14 +11,14 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/zhouhuafei/zhf.ip.git"
+        "url": "git+https://github.com/zhouhuafei/zhf.get-client-ip.git"
     },
     "author": "",
     "license": "ISC",
     "bugs": {
-        "url": "https://github.com/zhouhuafei/zhf.ip/issues"
+        "url": "https://github.com/zhouhuafei/zhf.get-client-ip/issues"
     },
-    "homepage": "https://github.com/zhouhuafei/zhf.ip#readme",
+    "homepage": "https://github.com/zhouhuafei/zhf.get-client-ip#readme",
     "devDependencies": {
         "babel-eslint": "^8.0.2",
         "babel-preset-env": "^1.6.0",
